@@ -20,4 +20,4 @@ pip3 install --user --upgrade virtualenv
  
 
 #delete app
-sudo rm -rf /home/ec2-user/Employee-Management-System-main
+sudo rm -rf /home/ec2-user/EmployeeManagement

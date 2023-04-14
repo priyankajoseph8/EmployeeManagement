@@ -2,10 +2,12 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/Employee-Management-System-main
+    destination: /home/ec2-user/EmployeeManagement
 hooks:
   BeforeInstall:
       - location: scripts/before_install.sh
      
   AfterInstall:
       - location: scripts/after_install.sh
+      
+    
