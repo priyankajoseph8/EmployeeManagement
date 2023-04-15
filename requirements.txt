@@ -24,7 +24,7 @@ idna==3.3
 importlib-metadata==4.8.1
 isort==5.9.3
 jmespath==0.10.0
-jsonschema==4.1.0
+jsonschema>=2.5.1,<4.0.0
 lazy-object-proxy==1.6.0
 mccabe==0.6.1
 paramiko==3.1.0
