@@ -1,0 +1,5 @@
+Requirement already satisfied: botocore in ./env/lib/python3.7/site-packages (1.29.81)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in ./env/lib/python3.7/site-packages (from botocore) (2.8.2)
+Requirement already satisfied: urllib3<1.27,>=1.25.4 in ./env/lib/python3.7/site-packages (from botocore) (1.26.15)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in ./env/lib/python3.7/site-packages (from botocore) (1.0.1)
+Requirement already satisfied: six>=1.5 in ./env/lib/python3.7/site-packages (from python-dateutil<3.0.0,>=2.1->botocore) (1.14.0)
