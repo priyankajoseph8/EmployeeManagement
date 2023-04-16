@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 import emp.views as fun
 from .views import about, services
-URL_PATTERNS = [
+urlpatterns = [
     path('admin/', admin.site.urls),
     path("", fun.emp_home),
     path("index/", fun.emp_home),
