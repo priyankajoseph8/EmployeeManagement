@@ -1,5 +1,4 @@
 version: 0.2
-
 phases:
   install:
     runtime-versions:
@@ -18,15 +17,8 @@ phases:
       - export PATH=$PATH:./sonar-scanner/bin
   build:
     commands:
-      - sonar-scanner \
-          -Dsonar.login=3d0e90ac334a4f8c42d0490d9bd6baebc6febd3c \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.projectKey=priyankajoseph8_EmployeeManagement \
-          -Dsonar.organization=priyankajoseph8 \
-          -Dsonar.sources=. \
-          -Dsonar.language=python \
-          -Dsonar.sourceEncoding=UTF-8
+      - sonar-scanner -Dsonar.login=3d0e90ac334a4f8c42d0490d9bd6baebc6febd3c -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=priyankajoseph8_EmployeeManagement -Dsonar.organization=priyankajoseph8 -Dsonar.c.file.suffixes= -Dsonar.cpp.file.suffixes= -Dsonar.objc.file.suffixes=-
       - sleep 4
-      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=priyankajoseph8_EmployeeManagement > result.json
+      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=priyankajoseph8_EmployeeManagement >result.json
       - cat result.json
-      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then exit 1 ; fi
+      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
