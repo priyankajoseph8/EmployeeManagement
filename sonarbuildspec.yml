@@ -17,7 +17,7 @@ phases:
       - export PATH=$PATH:./sonar-scanner/bin
   build:
     commands:
-      - sonar-scanner -Dsonar.login=3d0e90ac334a4f8c42d0490d9bd6baebc6febd3c -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=priyankajoseph8_EmployeeManagement -Dsonar.organization=priyankajoseph8 -D:sonar.scm.disabled=true
+      - sonar-scanner -Dsonar.login=3d0e90ac334a4f8c42d0490d9bd6baebc6febd3c -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=priyankajoseph8_EmployeeManagement -Dsonar.organization=priyankajoseph8 -Dsonar.c.file.suffixes=- -Dsonar.cpp.file.suffixes=- -Dsonar.objc.file.suffixes=-
       - sleep 4
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=priyankajoseph8_EmployeeManagement >result.json
       - cat result.json
