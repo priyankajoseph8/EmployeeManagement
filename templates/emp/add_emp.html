@@ -1,3 +1,53 @@
+<style>
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+form button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  background-color: #00ABB3;
+  color: #fff;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #008C95;
+}
+
+form button:focus {
+  outline: none;
+}
+</style>
+
 <form action="/emp/add-emp/" method="POST">
   {% csrf_token %}
   <div class="mb-3">
@@ -63,7 +113,7 @@
   </div>
 
   <div class="container text-center">
-    <button class="btn" style="background-color: #00ABB3;">
+    <button class="btn" type="submit">
       Add Employee
     </button>
   </div>
